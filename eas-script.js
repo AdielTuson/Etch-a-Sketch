@@ -24,15 +24,21 @@ setGrid(numberOfDivs);
 
 //A function that will update the grid to the resized size
 function resizeGrid() {
-    const userInput = prompt("Please select a number between 0 and 100 to determine the size of the grid:", 16)
-    numberOfDivs = (userInput ** 2);
+    const userInput = prompt("Please select a number between 0 and 100 to determine the size of the grid:", 16);
+    if (userInput <= 100 && userInput > 0) {
+        numberOfDivs = (userInput ** 2);
+            console.log(numberOfDivs);
+        resetGrid();
+        setGrid(numberOfDivs);
         console.log(numberOfDivs);
-    resetGrid();
-    setGrid(numberOfDivs);
-    console.log(numberOfDivs);
+    }
+    
+    else {
+        alert("Invalid number");
+    }
 }
 
-//A function that will reset the grid so anew grid can take it's place
+//A function that will reset the grid so a new grid can take it's place
 function resetGrid() {
     gridContainer.innerHTML = '';
 }
