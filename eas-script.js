@@ -1,4 +1,3 @@
-
 const gridContainer = document.querySelector(".grid");
 console.log(gridContainer);
 let numberOfDivs = 16 * 16;
@@ -23,12 +22,19 @@ function setGrid(itemsAmount) {
 }
 setGrid(numberOfDivs);
 
-resizeGridBtn.addEventListener('click', () => resizeGrid());
-
+//A function that will update the grid to the resized size
 function resizeGrid() {
     const userInput = prompt("Please select a number between 0 and 100 to determine the size of the grid:", 16)
     numberOfDivs = (userInput ** 2);
-    console.log(numberOfDivs);
+        console.log(numberOfDivs);
+    resetGrid();
     setGrid(numberOfDivs);
     console.log(numberOfDivs);
 }
+
+//A function that will reset the grid so anew grid can take it's place
+function resetGrid() {
+    gridContainer.innerHTML = '';
+}
+
+resizeGridBtn.addEventListener('click', () => resizeGrid());
