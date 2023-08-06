@@ -11,12 +11,14 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
+    margin: 20%;
+    border: 2px solid black;
 }
 
+.grid-item-hover {
+    background-color: black;
+}
 
-
-.grid-item {
-    width: 6.25%;
-    padding-bottom: 6.25%;
-    border: 2px solid black;
+#resize-btn {
+    
 }
