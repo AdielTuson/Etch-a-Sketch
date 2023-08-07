@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --costume-blue: rgb(9, 9, 92);
+}
+
 body {
     height: 100vh;
     text-align: center;
@@ -12,25 +16,39 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content:center;
+    background-image: url(images/background-blue.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .grid {
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid black;
+    border: 2px solid var(--costume-blue);
     width: 70%;
     max-width: 550px;
+    margin: 15px 0;
+    background-color: white;
+    /* box-shadow: 5px 5px 10px var(--costume-blue); */
+    box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 8px;
 }
 
 .grid-item-hover {
-    background-color: black;
+    background-color: rgb(2, 8, 48);
 }
 
 #main-header {
-    margin-bottom: 3%;
+    font-size: 50px;
+    color: var(--costume-blue);
 }
 
 #resize-btn {
-    margin-top: 3%;
     padding: 4px;
+    font-size: 20px;
+    border: 1px solid var(--costume-blue);
+    border-radius: 5px;
+    background-color: rgb(215, 218, 220);
+    color:rgb(0, 0, 77);
 }
+
