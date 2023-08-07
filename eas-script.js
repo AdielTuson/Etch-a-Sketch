@@ -33,7 +33,7 @@ function resizeGrid() {
         console.log(numberOfDivs);
     }
     
-    else {
+    else if (userInput !== null){
         alert("Invalid number");
     }
 }

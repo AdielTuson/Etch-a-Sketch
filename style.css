@@ -4,21 +4,33 @@
     box-sizing: border-box;
 }
 
-.body {
+body {
     height: 100vh;
+    text-align: center;
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
 }
 
 .grid {
     display: flex;
     flex-wrap: wrap;
-    margin: 20%;
     border: 2px solid black;
+    width: 70%;
+    max-width: 550px;
 }
 
 .grid-item-hover {
     background-color: black;
 }
 
+#main-header {
+    margin-bottom: 3%;
+}
+
 #resize-btn {
-    
+    margin-top: 3%;
+    padding: 4px;
 }
