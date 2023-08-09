@@ -5,7 +5,7 @@
 }
 
 :root {
-    --costume-blue: rgb(9, 9, 92);
+    --costume-blue: #09095c;
 }
 
 body {
@@ -23,6 +23,12 @@ body {
 
 .header {
     padding-bottom: 20px;
+}
+
+#title {
+    font-size: 60px;
+    color: var(--costume-blue);
+    text-align: center;
 }
 
 .main {
@@ -46,25 +52,15 @@ body {
     margin: 0 auto 0 auto;
 }
 
+.grid-item-hover {
+    background-color: rgb(2, 8, 48);
+}
+
 .settings {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-}
-
-.empty-container, .settings{
-    width: 20%;
-}
-
-.grid-item-hover {
-    background-color: rgb(2, 8, 48);
-}
-
-#title {
-    font-size: 60px;
-    color: var(--costume-blue);
-    text-align: center;
 }
 
 .settings > button {
@@ -76,5 +72,31 @@ body {
     color:rgb(0, 0, 77);
     width: 140px;
     cursor: pointer;
+}
+
+#color-picker {
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    /* overflow: hidden; */
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+}
+
+#color-picker::-webkit-color-swatch {
+    border-radius: 50%;
+    border: none;
+}
+
+#color-picker::-moz-color-swatch {
+    border-radius: 50%;
+    border: none;
+}
+
+.empty-container, .settings{
+    width: 20%;
 }
 
