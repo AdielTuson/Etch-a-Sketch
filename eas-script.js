@@ -1,8 +1,11 @@
 const gridContainer = document.querySelector(".grid");
 const resizeGridBtn = document.querySelector("#resize-btn");
 const clearBtn = document.querySelector('#clear');
+const rainbowBtn = document.querySelector('#random-color');
+    console.log(rainbowBtn);
 let numberOfDivs = 16 * 16;
 let userInput;
+let isRainbow = false;
 
 
 //setting the grid item's height and width in percentage to be dynamic
@@ -17,7 +20,14 @@ function setGrid(itemsAmount) {
         gridDiv.style.paddingBottom = `${gridItemsHeight}%`;
         gridContainer.appendChild(gridDiv);
 
-        gridDiv.addEventListener('mouseover', () => gridDiv.classList.add('grid-item-hover'));
+        gridDiv.addEventListener('mouseover', () => {
+            if (isRainbow){
+                gridDiv.style.backgroundColor = getRandomColor();
+            }
+            else {
+                gridDiv.classList.add('grid-item-hover');
+            }
+        });
     }
 
 }
@@ -49,3 +59,18 @@ clearBtn.addEventListener('click', () => {
     resetGrid();
     setGrid(numberOfDivs);
 });
+
+
+//Add an event listener to change to rainbow mode
+rainbowBtn.addEventListener('click', ()=> {
+    isRainbow = true;
+    console.log(isRainbow);
+});
+//will generate a random color in rgb() format
+function getRandomColor() {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return "rgb(" + r + "," + g + "," + b + ")";
+}
+
