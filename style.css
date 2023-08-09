@@ -69,11 +69,12 @@ body {
 
 .settings > button {
     padding: 5px;
-    font-size: 25px;
+    font-size: 22px;
     border: 1px solid var(--costume-blue);
     border-radius: 5px;
     background-color: rgb(215, 218, 220);
     color:rgb(0, 0, 77);
     width: 140px;
+    cursor: pointer;
 }
 
