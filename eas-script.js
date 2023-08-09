@@ -3,7 +3,8 @@ const resizeGridBtn = document.querySelector("#resize-btn");
 const clearBtn = document.querySelector('#clear');
 const rainbowBtn = document.querySelector('#random-color');
 const colorBtn = document.querySelector('#color-mode');
-    console.log(colorBtn);
+const pickColor = document.querySelector('#color-picker');
+    console.log(pickColor);
 
 let numberOfDivs = 16 * 16;
 let userInput;
@@ -27,7 +28,7 @@ function setGrid(itemsAmount) {
                 gridDiv.style.backgroundColor = getRandomColor();
             }
             else {
-                gridDiv.style.backgroundColor = "var(--costume-blue)";
+                gridDiv.style.backgroundColor = pickColor.value;
             }
         });
     }
@@ -62,12 +63,11 @@ clearBtn.addEventListener('click', () => {
     setGrid(numberOfDivs);
 });
 
-
 //Add an event listener to change to rainbow mode
 rainbowBtn.addEventListener('click', ()=> {
     isRainbow = true;
-    console.log(isRainbow);
 });
+
 //will generate a random color in rgb() format
 function getRandomColor() {
     var r = Math.floor(Math.random() * 256);
