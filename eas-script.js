@@ -2,7 +2,9 @@ const gridContainer = document.querySelector(".grid");
 const resizeGridBtn = document.querySelector("#resize-btn");
 const clearBtn = document.querySelector('#clear');
 const rainbowBtn = document.querySelector('#random-color');
-    console.log(rainbowBtn);
+const colorBtn = document.querySelector('#color-mode');
+    console.log(colorBtn);
+
 let numberOfDivs = 16 * 16;
 let userInput;
 let isRainbow = false;
@@ -25,7 +27,7 @@ function setGrid(itemsAmount) {
                 gridDiv.style.backgroundColor = getRandomColor();
             }
             else {
-                gridDiv.classList.add('grid-item-hover');
+                gridDiv.style.backgroundColor = "var(--costume-blue)";
             }
         });
     }
@@ -74,3 +76,7 @@ function getRandomColor() {
     return "rgb(" + r + "," + g + "," + b + ")";
 }
 
+//Add an event listener to change to color mode
+colorBtn.addEventListener('click', () => {
+    isRainbow = false;
+})

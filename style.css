@@ -50,10 +50,6 @@ body {
     margin: 0 auto 0 auto;
 }
 
-.grid-item-hover {
-    background-color: rgb(2, 8, 48);
-}
-
 .settings {
     display: flex;
     flex-direction: column;
