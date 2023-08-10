@@ -66,6 +66,7 @@ clearBtn.addEventListener('click', () => {
 //Add an event listener to change to rainbow mode
 rainbowBtn.addEventListener('click', ()=> {
     isRainbow = true;
+    changeBtnColors();
 });
 
 //will generate a random color in rgb() format
@@ -79,4 +80,22 @@ function getRandomColor() {
 //Add an event listener to change to color mode
 colorBtn.addEventListener('click', () => {
     isRainbow = false;
+    changeBtnColors();
 })
+
+
+function changeBtnColors() {
+    if (isRainbow){
+        rainbowBtn.style.backgroundColor = "var(--custom-color)";
+        rainbowBtn.style.color = "rgb(215, 218, 220)";
+        colorBtn.style.backgroundColor = "rgb(215, 218, 220)";
+        colorBtn.style.color = "var(--custom-color)";
+    }
+
+    else {
+        colorBtn.style.backgroundColor = "var(--custom-color)";
+        colorBtn.style.color = "rgb(215, 218, 220)";
+        rainbowBtn.style.backgroundColor = "rgb(215, 218, 220)";
+        rainbowBtn.style.color = "var(--custom-color)";
+    }
+}
