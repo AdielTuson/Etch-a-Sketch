@@ -19,14 +19,11 @@ body {
     background-size: cover;
 }
 
-.header {
-    padding-bottom: 20px;
-}
-
 #title {
     font-size: 60px;
     color: var(--costume-blue);
     text-align: center;
+    padding: 15px;
 }
 
 .main {
@@ -44,8 +41,7 @@ body {
     border: 2px solid var(--costume-blue);
     width: 60%;
     max-width: 550px;
-    min-width: 400px;
-    margin: 15px 0;
+    min-width: 350px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 10px 10px 8px;
     margin: 0 auto 0 auto;
