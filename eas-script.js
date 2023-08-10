@@ -83,7 +83,7 @@ colorBtn.addEventListener('click', () => {
     changeBtnColors();
 })
 
-
+//Change tho colors of selected color modes buttons
 function changeBtnColors() {
     if (isRainbow){
         rainbowBtn.style.backgroundColor = "var(--custom-color)";
@@ -99,3 +99,4 @@ function changeBtnColors() {
         rainbowBtn.style.color = "var(--custom-color)";
     }
 }
+changeBtnColors();
